@@ -1,0 +1,67 @@
+/* src/App.css */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.fondo {
+  background-image: url('./assets/fondoDeAplicacion.jpg');
+  background-size: cover; /* Mantén que la imagen cubra toda el área */
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute; /* Asegura que el fondo esté en la posición más atrás */
+  top: 0; /* Posiciona el fondo en la parte superior */
+  left: 0; /* Posiciona el fondo en la parte izquierda */
+  width: 100vw; /* Asegura que ocupe todo el ancho del viewport */
+  height: 100vh; /* Asegura que ocupe todo el alto del viewport */
+  z-index: -1; /* Mueve el fondo detrás del contenido */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Fondo negro con 50% de opacidad */
+  z-index: 1;
+}
+
+.text {
+  position: relative;
+  z-index: 10; /* Asegura que el texto quede sobre el fondo y el overlay */
+  color: white; /* Cambia el color del texto para que contraste con el fondo */
+  height: auto;
+  overflow: auto;
+  scrollbar-width: thin; /* Estilo en Firefox */
+  scrollbar-color: rgba(255, 255, 255, 0.5) rgba(255, 255, 255, 0.1); /* Color del "thumb" y el "track" en Firefox */
+}
+
+/* Personalización del scroll para navegadores WebKit (Chrome, Safari) */
+.text::-webkit-scrollbar {
+  width: 10px; /* Ancho del scroll vertical */
+}
+
+.text::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.5); /* Color del "thumb" del scroll */
+  border-radius: 10px; /* Bordes redondeados */
+  border: 2px solid transparent; /* Espacio alrededor del "thumb" */
+}
+
+.text::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.1); /* Color de fondo del "track" */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+
+html, body {
+  overflow-x: hidden;
+}
+
+.boton{
+  position: relative;
+  top: 10px;
+}
+
+.fontsize{
+  font-size: 16px;
+}
